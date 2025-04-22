@@ -15,8 +15,8 @@
       <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
       <a href="#resume" class="btn">📄 Download My Resume</a>
       <div class="socials">
-        <a href="https://github.com/yourusername" target="_blank">🐱 GitHub</a>
-        <a href="https://www.linkedin.com/in/yourusername" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/sudir" target="_blank">🐱 GitHub</a>
+        <a href="https://www.linkedin.com/in/sudir-pandian" target="_blank">🔗 LinkedIn</a>
       </div>
     </header>
 
@@ -47,7 +47,7 @@
 
     <section id="contact" class="contact">
       <h3>📬 Contact Me</h3>
-      <form action="https://formspree.io/f/yourFormID" method="POST">
+      <form action="https://formspree.io/f/{yourFormID}" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" required></textarea>
@@ -60,31 +60,6 @@
     </footer>
   </div>
 
-  <!-- Add your JavaScript here -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('.nav-link');
-
-      links.forEach(link => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault();
-          const target = document.querySelector(event.target.getAttribute('href'));
-          target.scrollIntoView({ behavior: 'smooth' });
-        });
-      });
-
-      // Add transition animations to sections
-      const sections = document.querySelectorAll('section');
-
-      window.addEventListener('scroll', () => {
-        sections.forEach(section => {
-          const rect = section.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            section.classList.add('in-view');
-          }
-        });
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

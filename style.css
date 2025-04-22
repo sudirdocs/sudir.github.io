@@ -1,67 +1,40 @@
-/* General Styling */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #1a1a1a; /* black background */
-  color: #fff; /* white text */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center; /* Ensure all text is centered */
+/* Base styles */
+html {
+  scroll-behavior: smooth;
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 20px;
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
+  text-align: center;
   margin-bottom: 30px;
 }
 
 header h1 {
   font-size: 2.5rem;
-  font-weight: bold;
 }
 
 header h2 {
   font-size: 1.5rem;
+}
+
+h3 {
   font-weight: bold;
 }
 
-header p {
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
-/* Resume and Social Links */
-header .btn,
-header .socials a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #ff6200;
-  color: #fff;
-  border-radius: 5px;
+a {
+  color: #f9a825;
   text-decoration: none;
-  font-weight: bold;
-}
-
-header .socials a:hover,
-header .btn:hover {
-  background-color: #e55300;
-}
-
-nav {
-  margin: 20px 0;
 }
 
 .nav-link {
-  color: #ff6200;
+  color: #f9a825;
   font-weight: 600;
   margin: 0 10px;
   text-decoration: none;
@@ -69,25 +42,43 @@ nav {
 }
 
 .nav-link:hover {
-  color: #e55300;
+  color: #ff5722;
 }
 
-/* Section Styling */
+/* Section visibility animation */
 section {
-  padding: 60px 20px;
-  margin-bottom: 30px;
   opacity: 0;
   transition: opacity 1s ease-out;
+  padding: 60px 20px;
+  margin-bottom: 30px;
 }
 
 section.in-view {
   opacity: 1;
 }
 
+/* Styling for buttons */
+.btn {
+  background-color: #f9a825;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #ff5722;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 li {
@@ -95,14 +86,8 @@ li {
   margin-bottom: 10px;
 }
 
-/* Skills, Projects, and Contact Styling */
-.skills, .projects, .contact {
-  text-align: center;
-  margin-top: 50px;
-}
-
 form input, form textarea {
-  width: 80%;
+  width: 100%;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -112,8 +97,8 @@ form input, form textarea {
 }
 
 form button {
-  background-color: #ff6200;
-  color: #fff;
+  background-color: #f9a825;
+  color: #000;
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -121,13 +106,5 @@ form button {
 }
 
 form button:hover {
-  background-color: #e55300;
-}
-
-/* Footer Styling */
-footer {
-  text-align: center;
-  font-size: 14px;
-  margin-top: 50px;
-  color: #fff;
+  background-color: #ff5722;
 }

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('.nav-link');
-
+  
   links.forEach(link => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
@@ -9,17 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Fade-in effect for each section when in view
+  // Add transition animations to sections
   const sections = document.querySelectorAll('section');
-  const revealOnScroll = () => {
+  
+  window.addEventListener('scroll', () => {
     sections.forEach(section => {
       const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
         section.classList.add('in-view');
       }
     });
-  };
-
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll();
+  });
 });
