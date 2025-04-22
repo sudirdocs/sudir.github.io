@@ -1,83 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sudir Pandian | AWS Cloud Engineer</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <button class="theme-toggle">🌓</button>
+  <button class="theme-toggle" onclick="toggleTheme()">🌗</button>
+
   <div class="container">
-    <img src="avatar.png" alt="Sudir Pandian" class="avatar">
+    <img src="avatar.png" alt="Sudir Avatar" width="100" style="border-radius: 50%; margin-bottom: 20px;">
     <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
     <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
-    <p class="intro">🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
+    <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
 
-    <a class="btn" href="resume.pdf" download>📄 Download My Resume</a>
+    <a href="resume.pdf" class="btn" download>📄 Download My Resume</a>
+
     <div class="socials">
-      <a href="https://github.com/sudir" target="_blank">🐱 GitHub</a>
-      <a href="https://linkedin.com/in/sudirpandian" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/sudir">🐱 GitHub</a>
+      <a href="https://linkedin.com/in/sudir">🔗 LinkedIn</a>
     </div>
 
-    <section class="career-summary">
-      <h3>📝 Career Summary</h3>
-      <p>Results-driven cloud professional with 2.5 years of experience in AWS cloud operations, Infrastructure optimization, and Automation. Skilled in Strategic planning, Architecture design, and Standard Operating Procedures (SOPs) to enhance efficiency and scalability. Proven ability to drive Revenue growth, Improve Service Reliability, and reduce costs by leveraging AWS solutions. Adept at implementing best practices, performance tuning, and automation to streamline operations and enhance cloud efficiency.</p>
-    </section>
-
-    <section class="experience slide-in-left">
-      <h3>💼 Experience</h3>
-      <h4>AWS Cloud Engineer – Precision Infomatic | Chennai | November 2022 – Present</h4>
+    <div class="skills">
+      <h3>⚙️ Skills</h3>
       <ul>
-        <li>Implemented AWS solutions to optimize cloud infrastructure, reducing downtime by 30%.</li>
-        <li>Led AWS cloud operations, optimizing EC2 instances, storage, and network configurations, reducing operational costs by 15%.</li>
-        <li>Developed and maintained AWS Lambda functions for automating key services, improving response times by 40%.</li>
-        <li>Designed scalable cloud architecture using AWS CloudFormation for cross-regional operations.</li>
-        <li>Implemented an end-to-end CI/CD pipeline using AWS CodePipeline, reducing deployment times by 45%.</li>
-        <li>Conducted AWS Well-Architected Reviews, ensuring best practices for security, reliability, and performance.</li>
-        <li>Implemented application monitoring in CloudWatch using Shell scripting.</li>
-        <li>Managed website restoration and configuration via ALB & Global Accelerator.</li>
-        <li>Administered AWS WAF, including IP whitelisting & blocking, and created rules to block bot traffic.</li>
+        <li>AWS (EC2, S3, RDS, Lambda, VPC, IAM)</li>
+        <li>CI/CD with CodePipeline, GitHub Actions</li>
+        <li>Infrastructure as Code: CloudFormation, Terraform</li>
+        <li>Linux Admin | Windows Server | Shell Scripting</li>
       </ul>
-    </section>
+    </div>
 
-    <section class="key-expertise slide-in-right">
-      <h3>🔧 Key Expertise</h3>
-      <div class="left-right">
-        <div>
-          <h4>AWS Compute Services</h4>
-          <ul>
-            <li>EC2, Auto Scaling, Lambda</li>
-            <li>AWS Elastic Beanstalk</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Security & IAM</h4>
-          <ul>
-            <li>IAM Roles, Policies</li>
-            <li>Security Groups, Network ACLs</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="jokes">
-      <h3>😄 DevOps Jokes</h3>
+    <div class="projects">
+      <h3>📁 Projects</h3>
       <ul>
-        <li>Why did the DevOps engineer cross the road? To automate it on the other side.</li>
-        <li>I told my boss I automate everything... He’s now worried I’ll automate myself out of a job!</li>
-        <li>There’s no place like <code>127.0.0.1</code></li>
+        <li>🌐 Global Web App Deployment: ALB + Global Accelerator</li>
+        <li>📊 Monitoring: Shell scripts pushing to CloudWatch</li>
+        <li>🧯 Disaster Recovery: Veeam, Commvault from EC2 snapshots</li>
       </ul>
-    </section>
+    </div>
 
-    <section class="contact slide-in-left">
+    <div class="blogs">
+      <h3>📰 Blog & Articles</h3>
+      <ul>
+        <li><a href="#">Deploying a CI/CD pipeline with CodePipeline (Dev.to)</a></li>
+        <li><a href="#">AWS Lambda Use Cases in Real Projects (Medium)</a></li>
+      </ul>
+    </div>
+
+    <div class="contact">
       <h3>📬 Contact Me</h3>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form action="https://formspree.io/f/yourformid" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
         <button class="btn" type="submit">Send Message</button>
       </form>
-    </section>
+    </div>
+
+    <div class="jokes">
+      <h3>😄 DevOps Jokes</h3>
+      <p id="joke">Loading joke...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
