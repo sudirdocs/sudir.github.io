@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sudir Pandian - AWS Cloud Engineer | DevOps Enthusiast</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -13,7 +13,13 @@
       <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
       <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
       <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
-      <a href="#resume" class="btn">📄 Download My Resume</a>
+
+      <!-- Resume Button -->
+      <div class="resume-btn">
+        <a href="resume.pdf" class="btn" download>📄 Download My Resume</a>
+      </div>
+
+      <!-- Social Links -->
       <div class="socials">
         <a href="https://github.com/sudir" target="_blank">🐿 GitHub</a>
         <a href="https://www.linkedin.com/in/sudir-pandian" target="_blank">🔗 LinkedIn</a>
@@ -39,17 +45,17 @@
     <section id="projects" class="projects slide-in-right">
       <h3>Projects</h3>
       <ul>
-        <li>Global Web App Deployment: Used ALB + Global Accelerator to route traffic across regions.</li>
-        <li>Automated Monitoring: Shell scripts to push app metrics into CloudWatch.</li>
-        <li>Disaster Recovery: Restored production apps using Veeam and Commvault from EC2 snapshots.</li>
+        <li>🌐 Global Web App Deployment: Used ALB + Global Accelerator to route traffic across regions.</li>
+        <li>📈 Automated Monitoring: Shell scripts to push app metrics into CloudWatch.</li>
+        <li>💾 Disaster Recovery: Restored production apps using Veeam and Commvault from EC2 snapshots.</li>
       </ul>
     </section>
 
     <section id="contact" class="contact">
       <h3>📬 Contact Me</h3>
-      <form action="https://formspree.io/f/{yourFormID}" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
+      <form action="https://formspree.io/f/yourFormID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
@@ -60,6 +66,27 @@
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('.nav-link');
+      links.forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          const target = document.querySelector(event.target.getAttribute('href'));
+          target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      const sections = document.querySelectorAll('section');
+      window.addEventListener('scroll', () => {
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            section.classList.add('in-view');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
