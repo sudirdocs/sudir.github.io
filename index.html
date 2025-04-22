@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sudir's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sudir's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Floating Objects -->
-  <div class="floating-object"></div>
-  <div class="floating-object"></div>
+    <!-- Floating Objects -->
+    <div class="floating-object"></div>
+    <div class="floating-object"></div>
 
-  <div class="container">
-    <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
-    <p>AWS Cloud Engineer | DevOps Enthusiast</p>
-    <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
-    <a href="resume.pdf" class="btn" download>📄 Download My Resume</a>
+    <div class="container">
+        <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
+        <p>AWS Cloud Engineer | DevOps Enthusiast</p>
+        <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
+        <a href="resume.pdf" class="btn" download>📄 Download My Resume</a>
 
-    <!-- Social Links -->
-    <div class="socials">
-      <a href="https://github.com/yourusername" target="_blank">🐱 GitHub</a>
-      <a href="https://www.linkedin.com/in/yourusername" target="_blank">🔗 LinkedIn</a>
+        <!-- Social Links -->
+        <div class="socials">
+            <a href="https://github.com/yourusername" target="_blank">🐱 GitHub</a>
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank">🔗 LinkedIn</a>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>AWS (EC2, S3, RDS, Lambda, VPC, IAM)</li>
+                <li>CI/CD with CodePipeline, GitHub Actions</li>
+                <li>Infrastructure as Code: CloudFormation, Terraform</li>
+                <li>Linux Admin | Windows Server | Shell Scripting</li>
+            </ul>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="projects">
+            <h3>Projects</h3>
+            <ul>
+                <li><strong>Global Web App Deployment</strong>: Used ALB + Global Accelerator to route traffic across regions.</li>
+                <li><strong>Automated Monitoring</strong>: Shell scripts to push app metrics into CloudWatch.</li>
+                <li><strong>Disaster Recovery</strong>: Restored production apps using Veeam and Commvault from EC2 snapshots.</li>
+            </ul>
+        </div>
+
+        <!-- Blog Section -->
+        <div class="blog">
+            <h3>Blog & Articles</h3>
+            <ul>
+                <li><a href="https://dev.to/yourusername/deploying-a-ci-cd-pipeline-with-codepipeline" target="_blank">Deploying a CI/CD pipeline with CodePipeline (Dev.to)</a></li>
+                <li><a href="https://medium.com/yourusername/aws-lambda-use-cases-in-real-projects" target="_blank">AWS Lambda Use Cases in Real Projects (Medium)</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="contact">
+            <h3>📬 Contact Me</h3>
+            <form action="https://formspree.io/f/your_form_id" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Spotify Playlist -->
+        <div class="spotify-player">
+            <iframe src="https://open.spotify.com/embed/playlist/your_playlist_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
     </div>
 
-    <!-- Skills Section -->
-    <div class="skills">
-      <h3>Skills</h3>
-      <ul>
-        <li>AWS (EC2, S3, RDS, Lambda, VPC, IAM)</li>
-        <li>CI/CD with CodePipeline, GitHub Actions</li>
-        <li>Infrastructure as Code: CloudFormation, Terraform</li>
-        <li>Linux Admin | Windows Server | Shell Scripting</li>
-      </ul>
+    <!-- Memory Game Section -->
+    <div class="game-container">
+        <h3>Memory Game</h3>
+        <div id="game-board" class="game-board"></div>
     </div>
 
-    <!-- Projects Section -->
-    <div class="projects">
-      <h3>Projects</h3>
-      <ul>
-        <li><strong>Global Web App Deployment</strong>: Used ALB + Global Accelerator to route traffic across regions.</li>
-        <li><strong>Automated Monitoring</strong>: Shell scripts to push app metrics into CloudWatch.</li>
-        <li><strong>Disaster Recovery</strong>: Restored production apps using Veeam and Commvault from EC2 snapshots.</li>
-      </ul>
-    </div>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle">🌙</button>
 
-    <!-- Blog Section -->
-    <div class="blog">
-      <h3>Blog & Articles</h3>
-      <ul>
-        <li><a href="https://dev.to/yourusername/deploying-a-ci-cd-pipeline-with-codepipeline" target="_blank">Deploying a CI/CD pipeline with CodePipeline (Dev.to)</a></li>
-        <li><a href="https://medium.com/yourusername/aws-lambda-use-cases-in-real-projects" target="_blank">AWS Lambda Use Cases in Real Projects (Medium)</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Form Section -->
-    <div class="contact">
-      <h3>📬 Contact Me</h3>
-      <form action="https://formspree.io/f/your_form_id" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </div>
-
-    <!-- Spotify Playlist -->
-    <div class="spotify-player">
-      <iframe src="https://open.spotify.com/embed/playlist/your_playlist_id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-  </div>
-
-  <!-- Memory Game Section -->
-  <div class="game-container">
-    <h3>Memory Game</h3>
-    <div id="game-board" class="game-board"></div>
-  </div>
-
-  <!-- Theme Toggle Button -->
-  <button class="theme-toggle">🌙</button>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,58 +1,72 @@
-// Theme Toggle Functionality
+// Theme Toggle Button Functionality
 const themeToggleButton = document.querySelector('.theme-toggle');
-const body = document.body;
-
 themeToggleButton.addEventListener('click', () => {
-  body.classList.toggle('dark');
-  if (body.classList.contains('dark')) {
-    themeToggleButton.textContent = '🌞'; // Change button to light mode
-  } else {
-    themeToggleButton.textContent = '🌙'; // Change button to dark mode
-  }
+    document.body.classList.toggle('dark');
+    themeToggleButton.textContent = document.body.classList.contains('dark') ? '🌞' : '🌙';
 });
 
-// Scroll Color Change (for dynamic effects)
-window.addEventListener('scroll', () => {
-  const scrollPosition = window.scrollY;
-  const socialLinks = document.querySelectorAll('.socials a');
-
-  socialLinks.forEach(link => {
-    link.style.color = `rgb(${scrollPosition % 255}, ${255 - (scrollPosition % 255)}, 200)`;
-  });
-});
-
-// Memory Game Logic (basic functionality)
+// Memory Game Script
 const gameBoard = document.getElementById('game-board');
-const gameCards = ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D'];
+
+// Initialize the memory game
+const cards = ['🍎', '🍎', '🍌', '🍌', '🍍', '🍍', '🍉', '🍉'];
 let selectedCards = [];
 let matchedCards = [];
 
-gameCards.sort(() => 0.5 - Math.random()).forEach(card => {
-  const cardElement = document.createElement('div');
-  cardElement.classList.add('card');
-  cardElement.textContent = card;
-  cardElement.addEventListener('click', () => handleCardClick(cardElement, card));
-  gameBoard.appendChild(cardElement);
-});
-
-function handleCardClick(cardElement, card) {
-  if (selectedCards.length < 2 && !matchedCards.includes(cardElement)) {
-    cardElement.style.backgroundColor = 'lightgreen';
-    selectedCards.push({ cardElement, card });
-    
-    if (selectedCards.length === 2) {
-      setTimeout(() => checkMatch(), 500);
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
-  }
+    return array;
+}
+
+function createBoard() {
+    const shuffledCards = shuffle([...cards]);
+    gameBoard.innerHTML = '';
+    shuffledCards.forEach(card => {
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
+        cardElement.textContent = card;
+        cardElement.addEventListener('click', flipCard);
+        gameBoard.appendChild(cardElement);
+    });
+}
+
+function flipCard(e) {
+    const clickedCard = e.target;
+    if (selectedCards.length < 2 && !clickedCard.classList.contains('flipped') && !matchedCards.includes(clickedCard)) {
+        clickedCard.classList.add('flipped');
+        selectedCards.push(clickedCard);
+        if (selectedCards.length === 2) {
+            checkMatch();
+        }
+    }
 }
 
 function checkMatch() {
-  if (selectedCards[0].card === selectedCards[1].card) {
-    matchedCards.push(selectedCards[0].cardElement, selectedCards[1].cardElement);
-    selectedCards = [];
-  } else {
-    selectedCards[0].cardElement.style.backgroundColor = '';
-    selectedCards[1].cardElement.style.backgroundColor = '';
-    selectedCards = [];
-  }
+    const [firstCard, secondCard] = selectedCards;
+    if (firstCard.textContent === secondCard.textContent) {
+        matchedCards.push(firstCard, secondCard);
+        resetSelection();
+        if (matchedCards.length === cards.length) {
+            setTimeout(() => {
+                alert('You won! 🎉');
+                createBoard(); // Reset the board after winning
+            }, 500);
+        }
+    } else {
+        setTimeout(() => {
+            firstCard.classList.remove('flipped');
+            secondCard.classList.remove('flipped');
+            resetSelection();
+        }, 1000);
+    }
 }
+
+function resetSelection() {
+    selectedCards = [];
+}
+
+// Create the board when the page loads
+createBoard();
