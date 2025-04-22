@@ -1,46 +1,58 @@
-// Memory Game
+// Theme Toggle Functionality
+const themeToggleButton = document.querySelector('.theme-toggle');
+const body = document.body;
+
+themeToggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  if (body.classList.contains('dark')) {
+    themeToggleButton.textContent = '🌞'; // Change button to light mode
+  } else {
+    themeToggleButton.textContent = '🌙'; // Change button to dark mode
+  }
+});
+
+// Scroll Color Change (for dynamic effects)
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  const socialLinks = document.querySelectorAll('.socials a');
+
+  socialLinks.forEach(link => {
+    link.style.color = `rgb(${scrollPosition % 255}, ${255 - (scrollPosition % 255)}, 200)`;
+  });
+});
+
+// Memory Game Logic (basic functionality)
 const gameBoard = document.getElementById('game-board');
-const cards = ['🍎', '🍌', '🍓', '🍏', '🍓', '🍌', '🍎', '🍏'];
-cards.sort(() => Math.random() - 0.5); // Shuffle cards
-
+const gameCards = ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D'];
 let selectedCards = [];
-let matchedCards = 0;
+let matchedCards = [];
 
-cards.forEach((card, index) => {
+gameCards.sort(() => 0.5 - Math.random()).forEach(card => {
   const cardElement = document.createElement('div');
   cardElement.classList.add('card');
-  cardElement.innerHTML = card;
-  cardElement.addEventListener('click', () => flipCard(cardElement, index));
+  cardElement.textContent = card;
+  cardElement.addEventListener('click', () => handleCardClick(cardElement, card));
   gameBoard.appendChild(cardElement);
 });
 
-function flipCard(cardElement, index) {
-  if (selectedCards.length === 2) return;
-
-  cardElement.classList.add('flipped');
-  selectedCards.push({ cardElement, card: cards[index], index });
-
-  if (selectedCards.length === 2) {
-    setTimeout(checkMatch, 1000);
+function handleCardClick(cardElement, card) {
+  if (selectedCards.length < 2 && !matchedCards.includes(cardElement)) {
+    cardElement.style.backgroundColor = 'lightgreen';
+    selectedCards.push({ cardElement, card });
+    
+    if (selectedCards.length === 2) {
+      setTimeout(() => checkMatch(), 500);
+    }
   }
 }
 
 function checkMatch() {
   if (selectedCards[0].card === selectedCards[1].card) {
-    matchedCards++;
+    matchedCards.push(selectedCards[0].cardElement, selectedCards[1].cardElement);
     selectedCards = [];
   } else {
-    selectedCards.forEach(({ cardElement }) => cardElement.classList.remove('flipped'));
+    selectedCards[0].cardElement.style.backgroundColor = '';
+    selectedCards[1].cardElement.style.backgroundColor = '';
     selectedCards = [];
   }
-
-  if (matchedCards === cards.length / 2) {
-    alert('You win!');
-  }
 }
-
-// Theme Toggle
-const themeToggleButton = document.querySelector('.theme-toggle');
-themeToggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-});
