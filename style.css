@@ -3,6 +3,7 @@
   --text: #111;
   --accent: #00c9a7;
   --card: #fff;
+  --scroll-bg: #1e293b;
 }
 
 body.dark {
@@ -22,13 +23,15 @@ body {
   min-height: 100vh;
   padding: 40px;
   transition: all 0.3s ease;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease;
 }
 
 .container {
   background: var(--card);
   padding: 40px;
   border-radius: 20px;
-  max-width: 700px;
+  max-width: 900px;
   width: 100%;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -95,8 +98,105 @@ li {
   cursor: pointer;
 }
 
-/* Animation */
+.avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Scroll animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 1s forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInRight 1s forwards;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scroll-based color change */
+body {
+  transition: background-color 0.3s;
+}
+
+body.scrolled {
+  background-color: var(--scroll-bg);
+}
+
+/* Styling for sections */
+section {
+  margin-top: 50px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  padding: 12px 24px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  opacity: 0.8;
+}
+
+/* Left and Right Layout */
+.left-right {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.left-right div {
+  width: 48%;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .left-right {
+    flex-direction: column;
+  }
+  .left-right div {
+    width: 100%;
+  }
 }
