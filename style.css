@@ -1,4 +1,9 @@
-/* Add this to your existing style.css */
+:root {
+  --bg: #0f0f0f;
+  --text: #ffffff;
+  --accent: #00ffcc;
+  --hover: #00bfa5;
+}
 
 html {
   scroll-behavior: smooth;
@@ -8,38 +13,62 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: 'Poppins', sans-serif;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
 }
 
 header {
   text-align: center;
-  margin-bottom: 30px;
+  padding: 50px 20px 20px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  margin: 0;
 }
 
 header h2 {
   font-size: 1.5rem;
+  margin-top: 10px;
+  color: var(--accent);
 }
 
-section {
-  opacity: 0;
-  transition: opacity 1s ease-out;
+.highlight {
+  color: var(--accent);
 }
 
-section.in-view {
-  opacity: 1;
+.socials a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.socials a:hover {
+  color: var(--hover);
+}
+
+nav {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .nav-link {
   color: var(--accent);
-  font-weight: 600;
-  margin: 0 10px;
   text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  font-size: 1rem;
   padding: 10px;
+  transition: color 0.3s;
 }
 
 .nav-link:hover {
@@ -47,50 +76,75 @@ section.in-view {
 }
 
 section {
-  padding: 60px 20px;
-  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+  margin-bottom: 60px;
 }
 
-.skills, .projects, .contact {
+section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h3 {
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
   text-align: center;
-  margin-top: 50px;
 }
 
 ul {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
+  text-align: center;
 }
 
 li {
-  font-weight: 500;
   margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-form input, form textarea {
+form {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+input, textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  background-color: #333;
-  color: var(--text);
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
   border: none;
+  background-color: #1e1e1e;
+  color: var(--text);
 }
 
-form button {
+textarea {
+  height: 120px;
+}
+
+.btn {
   background-color: var(--accent);
-  color: var(--text);
-  padding: 10px 20px;
-  border-radius: 5px;
+  color: var(--bg);
+  padding: 12px 25px;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-form button:hover {
+.btn:hover {
   background-color: var(--hover);
 }
 
 footer {
   text-align: center;
-  color: var(--text);
-  font-size: 14px;
+  padding: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  color: #aaa;
 }
