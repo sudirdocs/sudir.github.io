@@ -3,32 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sudir Pandian - Portfolio</title>
+  <title>Sudir Pandian - AWS Cloud Engineer | DevOps Enthusiast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Main Container -->
   <div class="container">
     <header>
-      <div class="profile-img">
-        <img src="assets/profile.jpg" alt="Sudir Pandian">
+      <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
+      <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
+      <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
+      <a href="#resume" class="btn">📄 Download My Resume</a>
+      <div class="socials">
+        <a href="https://github.com/sudir" target="_blank">🐱 GitHub</a>
+        <a href="https://www.linkedin.com/in/sudir-pandian" target="_blank">🔗 LinkedIn</a>
       </div>
-      <h1>Sudir Pandian</h1>
-      <p>AWS Cloud Engineer | DevOps Enthusiast</p>
-      <a href="resume.pdf" class="btn" download>Download Resume</a>
     </header>
 
-    <!-- About Section -->
-    <section class="about">
-      <h2>About Me</h2>
-      <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
-      <p>I specialize in cloud computing, automation, CI/CD pipelines, and infrastructure as code. I'm experienced with AWS services like EC2, Lambda, S3, RDS, and more.</p>
-    </section>
+    <nav>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
 
-    <!-- Skills Section -->
-    <section class="skills">
-      <h2>Skills</h2>
+    <section id="skills" class="skills slide-in-left">
+      <h3>Skills</h3>
       <ul>
         <li>AWS (EC2, S3, RDS, Lambda, VPC, IAM)</li>
         <li>CI/CD with CodePipeline, GitHub Actions</li>
@@ -37,33 +36,28 @@
       </ul>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects">
-      <h2>Projects</h2>
+    <section id="projects" class="projects slide-in-right">
+      <h3>Projects</h3>
       <ul>
-        <li><strong>Global Web App Deployment</strong>: Used ALB + Global Accelerator to route traffic across regions.</li>
-        <li><strong>Automated Monitoring</strong>: Shell scripts to push app metrics into CloudWatch.</li>
-        <li><strong>Disaster Recovery</strong>: Restored production apps using Veeam and Commvault from EC2 snapshots.</li>
+        <li>Global Web App Deployment: Used ALB + Global Accelerator to route traffic across regions.</li>
+        <li>Automated Monitoring: Shell scripts to push app metrics into CloudWatch.</li>
+        <li>Disaster Recovery: Restored production apps using Veeam and Commvault from EC2 snapshots.</li>
       </ul>
     </section>
 
-    <!-- Social Links -->
-    <section class="socials">
-      <h2>Connect with Me</h2>
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="contact">
-      <h2>Contact</h2>
-      <form action="https://formspree.io/f/your_form_id" method="POST">
+    <section id="contact" class="contact">
+      <h3>📬 Contact Me</h3>
+      <form action="https://formspree.io/f/{yourFormID}" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
     </section>
+
+    <footer>
+      <p>&copy; 2025 Sudir Pandian | All Rights Reserved</p>
+    </footer>
   </div>
 
   <script src="script.js"></script>

@@ -1,65 +1,59 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Add this to your existing style.css */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-}
-
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 header {
   text-align: center;
+  margin-bottom: 30px;
 }
 
-.profile-img img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+header h1 {
+  font-size: 2.5rem;
 }
 
-h1 {
-  font-size: 2.5em;
-  margin-top: 20px;
-}
-
-p {
-  font-size: 1.2em;
-  margin-top: 10px;
-}
-
-a.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 20px;
-  background-color: #3498db;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-a.btn:hover {
-  background-color: #2980b9;
+header h2 {
+  font-size: 1.5rem;
 }
 
 section {
-  margin: 30px 0;
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
 
-h2 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  color: #333;
+section.in-view {
+  opacity: 1;
+}
+
+.nav-link {
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-link:hover {
+  color: var(--hover);
+}
+
+section {
+  padding: 60px 20px;
+  margin-bottom: 30px;
+}
+
+.skills, .projects, .contact {
+  text-align: center;
+  margin-top: 50px;
 }
 
 ul {
@@ -67,48 +61,36 @@ ul {
   padding: 0;
 }
 
-ul li {
-  font-size: 1.1em;
+li {
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
-.socials a {
-  display: inline-block;
-  margin: 10px 15px;
-  text-decoration: none;
-  color: #3498db;
-  font-size: 1.3em;
-}
-
-.socials a:hover {
-  color: #2980b9;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact input,
-.contact textarea {
+form input, form textarea {
   width: 100%;
-  max-width: 500px;
   padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
+  margin-bottom: 20px;
   border-radius: 5px;
+  background-color: #333;
+  color: var(--text);
+  border: none;
 }
 
-.contact button {
+form button {
+  background-color: var(--accent);
+  color: var(--text);
   padding: 10px 20px;
-  background-color: #3498db;
-  color: white;
-  border: none;
   border-radius: 5px;
+  border: none;
   cursor: pointer;
 }
 
-.contact button:hover {
-  background-color: #2980b9;
+form button:hover {
+  background-color: var(--hover);
+}
+
+footer {
+  text-align: center;
+  color: var(--text);
+  font-size: 14px;
 }
