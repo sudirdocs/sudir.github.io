@@ -1,10 +1,10 @@
 /* Root colors */
 :root {
-  --bg: #f7f7f7;
-  --text: #111;
-  --accent: #00c9a7;
-  --hover: #ff7e00;
-  --card: #fff;
+  --bg: #000; /* Black background */
+  --text: #fff; /* White text */
+  --accent: #00c9a7; /* Accent color */
+  --hover: #ff7e00; /* Hover color */
+  --card: #333; /* Dark card color */
 }
 
 body {
@@ -26,10 +26,12 @@ body {
 /* Header */
 header h1 {
   font-size: 2.5rem;
+  font-weight: bold; /* Bold title */
 }
 
 header h2 {
   font-size: 1.5rem;
+  font-weight: bold; /* Bold subtitle */
 }
 
 header p {
