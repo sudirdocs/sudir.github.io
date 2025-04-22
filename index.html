@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0d0d0d" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="icons/icon-192.png" />
-  <title>Sudir Pandian | AWS Cloud Engineer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudir Pandian - AWS Cloud Engineer | DevOps Enthusiast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
+  <div class="container">
     <header>
       <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
       <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
       <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
-      <a href="resume.pdf" download class="btn">📄 Download My Resume</a>
+      <a href="#resume" class="btn">📄 Download My Resume</a>
       <div class="socials">
-        <a href="https://github.com/sudir" target="_blank">🐿 GitHub</a>
-        <a href="https://www.linkedin.com/in/sudir-pandian" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank">🐱 GitHub</a>
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank">🔗 LinkedIn</a>
       </div>
     </header>
 
-    <nav>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="skills" class="section">
+    <section id="skills" class="skills">
       <h3>Skills</h3>
       <ul>
         <li>AWS (EC2, S3, RDS, Lambda, VPC, IAM)</li>
@@ -38,20 +30,20 @@
       </ul>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="projects">
       <h3>Projects</h3>
       <ul>
-        <li><strong>Global Web App Deployment:</strong> ALB + Global Accelerator for region routing.</li>
-        <li><strong>Automated Monitoring:</strong> Shell scripts pushing metrics into CloudWatch.</li>
-        <li><strong>Disaster Recovery:</strong> Restore apps with Veeam & Commvault from EC2 snapshots.</li>
+        <li>Global Web App Deployment: ALB + Global Accelerator for region routing.</li>
+        <li>Automated Monitoring: Shell scripts pushing metrics into CloudWatch.</li>
+        <li>Disaster Recovery: Restore apps with Veeam & Commvault from EC2 snapshots.</li>
       </ul>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="contact">
       <h3>📬 Contact Me</h3>
-      <form action="https://formspree.io/f/your_form_id" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
+      <form action="https://formspree.io/f/yourFormID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
@@ -61,12 +53,5 @@
       <p>&copy; 2025 Sudir Pandian | All Rights Reserved</p>
     </footer>
   </div>
-
-  <script src="script.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js').then(() => console.log('Service Worker Registered'));
-    }
-  </script>
 </body>
 </html>
