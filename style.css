@@ -1,30 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
-  padding: 50px;
-  color: #333;
 }
 
 .container {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  display: inline-block;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.download-btn {
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #a2d2ff;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #4CAF50;
-  color: white;
+  padding: 12px 25px;
+  background-color: #00c9a7;
+  color: #fff;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
 
-.download-btn:hover {
-  background-color: #45a049;
+.btn:hover {
+  background-color: #00b494;
+}
+
+.highlight {
+  color: #ffe066;
 }
