@@ -1,29 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth scroll for nav links
   const links = document.querySelectorAll('.nav-link');
-  
+
   links.forEach(link => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
       const target = document.querySelector(event.target.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+      target.scrollIntoView({ behavior: 'smooth' });
     });
   });
 
-  // Add scroll animation to sections
+  // Fade-in effect for each section when in view
   const sections = document.querySelectorAll('section');
-  
-  window.addEventListener('scroll', () => {
+  const revealOnScroll = () => {
     sections.forEach(section => {
       const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
+      if (rect.top < window.innerHeight - 100) {
         section.classList.add('in-view');
       }
     });
-  });
+  };
 
-  // Trigger animation on load
-  window.dispatchEvent(new Event('scroll'));
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
 });

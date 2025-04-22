@@ -1,198 +1,135 @@
-/* Root colors */
+/* style.css */
+
 :root {
-  --bg: #000; /* Black background */
-  --text: #fff; /* White text */
-  --accent: #00c9a7; /* Accent color */
-  --hover: #ff7e00; /* Hover color */
-  --card: #333; /* Dark card color */
+  --bg: #0f0f0f;
+  --text: #ffffff;
+  --accent: #00adb5;
+  --hover: #00ffc3;
+  --header-size: 2.5rem;
+  --subheader-size: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  font-weight: normal; /* Ensures normal text weight */
+  line-height: 1.6;
+  padding: 0 20px;
 }
 
-/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px;
-  text-align: center;
+  padding: 20px;
 }
 
-/* Header */
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 header h1 {
-  font-size: 2.5rem;
-  font-weight: bold; /* Bold title */
+  font-size: var(--header-size);
+  font-weight: bold;
+  color: var(--accent);
 }
 
 header h2 {
-  font-size: 1.5rem;
-  font-weight: bold; /* Bold subtitle */
+  font-size: var(--subheader-size);
+  font-weight: bold;
 }
 
-header p {
-  font-size: 1.2rem;
-  margin: 20px 0;
-}
-
-/* Highlight Text */
-.highlight {
-  color: var(--accent);
-}
-
-/* Buttons */
-.btn {
-  background-color: var(--accent);
-  color: var(--text);
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-weight: 600;
-  margin: 20px 0;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background-color: var(--hover);
-  opacity: 0.8;
-}
-
-/* Social Links */
-.resume-social {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.socials a {
-  margin: 0 12px;
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: var(--text);
-}
-
-.socials {
+nav {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  margin: 20px 0;
 }
 
-/* Navigation */
-nav {
-  margin-top: 30px;
-}
-
-.nav-link {
+nav a {
+  margin: 0 15px;
   color: var(--accent);
-  font-weight: bold; /* Bold navigation links */
-  margin: 0 10px;
   text-decoration: none;
-  padding: 10px;
+  font-weight: bold;
 }
 
-.nav-link:hover {
+nav a:hover {
   color: var(--hover);
 }
 
-/* Section Styles */
 section {
+  margin-bottom: 60px;
   opacity: 0;
-  transition: opacity 1s ease-out;
-  padding: 60px 20px;
-  margin-bottom: 30px;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(30px);
 }
 
 section.in-view {
   opacity: 1;
+  transform: translateY(0);
 }
 
-/* Skills and Projects */
-.skills, .projects, .contact {
-  text-align: center;
-  margin-top: 50px;
-}
-
-ul {
+.skills ul, .projects ul {
   list-style: none;
   padding: 0;
 }
 
-li {
-  font-weight: 500;
+.skills li, .projects li {
   margin-bottom: 10px;
+  font-size: 1rem;
 }
 
-/* Contact Form */
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
 form input, form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  background: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
   border-radius: 5px;
-  background-color: #333;
-  color: var(--text);
-  border: none;
 }
 
 form button {
-  background-color: var(--accent);
-  color: var(--text);
   padding: 10px 20px;
-  border-radius: 5px;
+  background: var(--accent);
+  color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 form button:hover {
-  background-color: var(--hover);
+  background: var(--hover);
 }
 
-/* Footer */
 footer {
   text-align: center;
+  font-size: 0.9rem;
+  margin-top: 30px;
   color: var(--text);
-  font-size: 14px;
 }
 
-/* Scroll Effect */
-html {
-  scroll-behavior: smooth;
+.socials {
+  margin-top: 15px;
 }
 
-/* Animations */
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.socials a {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--accent);
 }
 
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.slide-in-left {
-  animation: slideInLeft 1s ease-out forwards;
-}
-
-.slide-in-right {
-  animation: slideInRight 1s ease-out forwards;
+.socials a:hover {
+  color: var(--hover);
 }
