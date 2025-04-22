@@ -1,25 +1,69 @@
-.header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --accent: #0077ff;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.container {
+  text-align: center;
+}
+
+h1, h2, h3 {
+  margin: 0.5em 0;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.theme-toggle {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+.dark {
+  --bg: #1a1a1a;
+  --text: #f1f1f1;
+  --accent: #00bfff;
+}
+
+/* Avatar style */
 .avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  border: 2px solid var(--accent);
   object-fit: cover;
-  border: 3px solid var(--accent);
+  margin-bottom: 10px;
 }
 
-.blog ul a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-}
-
+/* Contact form styling */
 .contact form {
   display: flex;
   flex-direction: column;
@@ -27,9 +71,10 @@
   margin-top: 20px;
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid #ccc;
   font-family: inherit;
 }
