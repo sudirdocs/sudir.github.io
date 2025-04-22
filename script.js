@@ -1,25 +1,46 @@
-// script.js
+// Memory Game
+const gameBoard = document.getElementById('game-board');
+const cards = ['🍎', '🍌', '🍓', '🍏', '🍓', '🍌', '🍎', '🍏'];
+cards.sort(() => Math.random() - 0.5); // Shuffle cards
 
-document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('.nav-link');
-  
-  links.forEach(link => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const target = document.querySelector(event.target.getAttribute('href'));
-      target.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
+let selectedCards = [];
+let matchedCards = 0;
 
-  // Add transition animations to sections
-  const sections = document.querySelectorAll('section');
-  
-  window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) {
-        section.classList.add('in-view');
-      }
-    });
-  });
+cards.forEach((card, index) => {
+  const cardElement = document.createElement('div');
+  cardElement.classList.add('card');
+  cardElement.innerHTML = card;
+  cardElement.addEventListener('click', () => flipCard(cardElement, index));
+  gameBoard.appendChild(cardElement);
+});
+
+function flipCard(cardElement, index) {
+  if (selectedCards.length === 2) return;
+
+  cardElement.classList.add('flipped');
+  selectedCards.push({ cardElement, card: cards[index], index });
+
+  if (selectedCards.length === 2) {
+    setTimeout(checkMatch, 1000);
+  }
+}
+
+function checkMatch() {
+  if (selectedCards[0].card === selectedCards[1].card) {
+    matchedCards++;
+    selectedCards = [];
+  } else {
+    selectedCards.forEach(({ cardElement }) => cardElement.classList.remove('flipped'));
+    selectedCards = [];
+  }
+
+  if (matchedCards === cards.length / 2) {
+    alert('You win!');
+  }
+}
+
+// Theme Toggle
+const themeToggleButton = document.querySelector('.theme-toggle');
+themeToggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
 });
