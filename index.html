@@ -19,8 +19,14 @@
         <a href="https://www.linkedin.com/in/sudir-pandian" target="_blank">🔗 LinkedIn</a>
       </div>
     </header>
-    
-    <section class="skills slide-in-left">
+
+    <nav>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <section id="skills" class="skills slide-in-left">
       <h3>Skills</h3>
       <ul>
         <li>AWS (EC2, S3, RDS, Lambda, VPC, IAM)</li>
@@ -29,8 +35,8 @@
         <li>Linux Admin | Windows Server | Shell Scripting</li>
       </ul>
     </section>
-    
-    <section class="projects slide-in-right">
+
+    <section id="projects" class="projects slide-in-right">
       <h3>Projects</h3>
       <ul>
         <li>Global Web App Deployment: Used ALB + Global Accelerator to route traffic across regions.</li>
@@ -38,16 +44,8 @@
         <li>Disaster Recovery: Restored production apps using Veeam and Commvault from EC2 snapshots.</li>
       </ul>
     </section>
-    
-    <section class="blog">
-      <h3>📰 Blog & Articles</h3>
-      <ul>
-        <li><a href="https://dev.to/sudir" target="_blank">Deploying a CI/CD pipeline with CodePipeline</a></li>
-        <li><a href="https://medium.com/@sudir" target="_blank">AWS Lambda Use Cases in Real Projects</a></li>
-      </ul>
-    </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
       <h3>📬 Contact Me</h3>
       <form action="https://formspree.io/f/{yourFormID}" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
@@ -61,5 +59,7 @@
       <p>&copy; 2025 Sudir Pandian | All Rights Reserved</p>
     </footer>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

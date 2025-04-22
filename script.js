@@ -1,22 +1,25 @@
 // script.js
 
-// Dark mode toggle
-const toggle = document.querySelector('.theme-toggle');
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-});
-
-// Scroll animations using Intersection Observer
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('.nav-link');
+  
+  links.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const target = document.querySelector(event.target.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
   });
-}, {
-  threshold: 0.1
-});
 
-document.querySelectorAll('.slide-in-left, .slide-in-right, .fade-in').forEach(el => {
-  observer.observe(el);
+  // Add transition animations to sections
+  const sections = document.querySelectorAll('section');
+  
+  window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        section.classList.add('in-view');
+      }
+    });
+  });
 });
