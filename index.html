@@ -1,67 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sudir Pandian | AWS Cloud Engineer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <button class="theme-toggle">🌓</button>
   <div class="container">
-    <button class="theme-toggle">🌙</button>
+    <img src="avatar.png" alt="Sudir Pandian" class="avatar">
+    <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
+    <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
+    <p class="intro">🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
 
-    <div class="header">
-      <img src="avatar.png" alt="Sudir Pandian" class="avatar" />
-      <div>
-        <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
-        <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
-      </div>
-    </div>
-
-    <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
-    <a href="resume.pdf" class="btn" download>📄 Download My Resume</a>
-
+    <a class="btn" href="resume.pdf" download>📄 Download My Resume</a>
     <div class="socials">
       <a href="https://github.com/sudir" target="_blank">🐱 GitHub</a>
-      <a href="https://linkedin.com/in/sudir-pandian" target="_blank">🔗 LinkedIn</a>
+      <a href="https://linkedin.com/in/sudirpandian" target="_blank">🔗 LinkedIn</a>
     </div>
 
-    <section class="skills">
-      <h3>⚙️ Skills</h3>
+    <section class="career-summary">
+      <h3>📝 Career Summary</h3>
+      <p>Results-driven cloud professional with 2.5 years of experience in AWS cloud operations, Infrastructure optimization, and Automation. Skilled in Strategic planning, Architecture design, and Standard Operating Procedures (SOPs) to enhance efficiency and scalability. Proven ability to drive Revenue growth, Improve Service Reliability, and reduce costs by leveraging AWS solutions. Adept at implementing best practices, performance tuning, and automation to streamline operations and enhance cloud efficiency.</p>
+    </section>
+
+    <section class="experience slide-in-left">
+      <h3>💼 Experience</h3>
+      <h4>AWS Cloud Engineer – Precision Infomatic | Chennai | November 2022 – Present</h4>
       <ul>
-        <li>AWS (EC2, S3, RDS, Lambda, VPC, IAM)</li>
-        <li>CI/CD with CodePipeline, GitHub Actions</li>
-        <li>Infrastructure as Code: CloudFormation, Terraform</li>
-        <li>Linux Admin | Windows Server | Shell Scripting</li>
+        <li>Implemented AWS solutions to optimize cloud infrastructure, reducing downtime by 30%.</li>
+        <li>Led AWS cloud operations, optimizing EC2 instances, storage, and network configurations, reducing operational costs by 15%.</li>
+        <li>Developed and maintained AWS Lambda functions for automating key services, improving response times by 40%.</li>
+        <li>Designed scalable cloud architecture using AWS CloudFormation for cross-regional operations.</li>
+        <li>Implemented an end-to-end CI/CD pipeline using AWS CodePipeline, reducing deployment times by 45%.</li>
+        <li>Conducted AWS Well-Architected Reviews, ensuring best practices for security, reliability, and performance.</li>
+        <li>Implemented application monitoring in CloudWatch using Shell scripting.</li>
+        <li>Managed website restoration and configuration via ALB & Global Accelerator.</li>
+        <li>Administered AWS WAF, including IP whitelisting & blocking, and created rules to block bot traffic.</li>
       </ul>
     </section>
 
-    <section class="projects">
-      <h3>📁 Projects</h3>
+    <section class="key-expertise slide-in-right">
+      <h3>🔧 Key Expertise</h3>
       <ul>
-        <li><strong>Global Web App Deployment:</strong> Used ALB + Global Accelerator to route traffic across regions.</li>
-        <li><strong>Automated Monitoring:</strong> Shell scripts to push app metrics into CloudWatch.</li>
-        <li><strong>Disaster Recovery:</strong> Restored production apps using Veeam and Commvault from EC2 snapshots.</li>
+        <li>AWS Compute Services: EC2, Auto Scaling, Lambda</li>
+        <li>AWS Network Storage: S3, EBS, EFS</li>
+        <li>Identity & Access Management (IAM)</li>
+        <li>AWS WAF & Security</li>
+        <li>CI/CD & Infrastructure as Code: CloudFormation, Terraform</li>
+        <li>Linux & Windows Systems Administration</li>
+        <li>Deployment & Troubleshooting</li>
+        <li>Collaboration & Documentation</li>
+      </ul>
+    </section>
+
+    <section class="education">
+      <h3>🎓 Education</h3>
+      <p><strong>Sri Shakthi Institute of Engineering & Technology</strong><br>B.Tech Information Technology | CGPA 7.4/10</p>
+    </section>
+
+    <section class="certifications">
+      <h3>🏅 Certifications</h3>
+      <ul>
+        <li>AWS Certified Solutions Architect</li>
+      </ul>
+    </section>
+
+    <section class="jokes">
+      <h3>😄 DevOps Jokes</h3>
+      <ul>
+        <li>Why did the DevOps engineer cross the road? To automate it on the other side.</li>
+        <li>I told my boss I automate everything... He’s now worried I’ll automate myself out of a job!</li>
+        <li>There’s no place like <code>127.0.0.1</code></li>
       </ul>
     </section>
 
     <section class="blog">
       <h3>📰 Blog & Articles</h3>
       <ul>
-        <li><a href="https://dev.to/sudir" target="_blank">Deploying a CI/CD pipeline with CodePipeline (Dev.to)</a></li>
-        <li><a href="https://medium.com/@sudir" target="_blank">AWS Lambda Use Cases in Real Projects (Medium)</a></li>
+        <li><a href="#">Deploying a CI/CD pipeline with CodePipeline</a></li>
+        <li><a href="#">AWS Lambda Use Cases in Real Projects</a></li>
       </ul>
     </section>
 
-    <section class="contact">
+    <section class="contact slide-in-left">
       <h3>📬 Contact Me</h3>
       <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <button class="btn" type="submit">Send Message</button>
       </form>
     </section>
   </div>
