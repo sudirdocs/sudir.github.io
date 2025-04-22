@@ -12,8 +12,14 @@
   <div class="container">
     <button class="theme-toggle">🌙</button>
 
-    <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
-    <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
+    <div class="header">
+      <img src="avatar.png" alt="Sudir Pandian" class="avatar" />
+      <div>
+        <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
+        <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
+      </div>
+    </div>
+
     <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
     <a href="resume.pdf" class="btn" download>📄 Download My Resume</a>
 
@@ -39,6 +45,24 @@
         <li><strong>Automated Monitoring:</strong> Shell scripts to push app metrics into CloudWatch.</li>
         <li><strong>Disaster Recovery:</strong> Restored production apps using Veeam and Commvault from EC2 snapshots.</li>
       </ul>
+    </section>
+
+    <section class="blog">
+      <h3>📰 Blog & Articles</h3>
+      <ul>
+        <li><a href="https://dev.to/sudir" target="_blank">Deploying a CI/CD pipeline with CodePipeline (Dev.to)</a></li>
+        <li><a href="https://medium.com/@sudir" target="_blank">AWS Lambda Use Cases in Real Projects (Medium)</a></li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h3>📬 Contact Me</h3>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
     </section>
   </div>
 </body>
