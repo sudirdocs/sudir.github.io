@@ -10,17 +10,15 @@ html, body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center; /* Ensure all text is centered */
 }
 
-/* Container for all content */
 .container {
   width: 100%;
-  max-width: 1200px; /* limit max width */
+  max-width: 1200px;
   padding: 20px;
-  text-align: center;
 }
 
-/* Header Section */
 header {
   margin-bottom: 30px;
 }
@@ -58,7 +56,6 @@ header .btn:hover {
   background-color: #e55300;
 }
 
-/* Navigation Links */
 nav {
   margin: 20px 0;
 }
@@ -87,15 +84,10 @@ section.in-view {
   opacity: 1;
 }
 
-/* Skills, Projects, and Contact Styling */
-.skills, .projects, .contact {
-  text-align: center;
-  margin-top: 50px;
-}
-
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
@@ -103,7 +95,12 @@ li {
   margin-bottom: 10px;
 }
 
-/* Form Styling */
+/* Skills, Projects, and Contact Styling */
+.skills, .projects, .contact {
+  text-align: center;
+  margin-top: 50px;
+}
+
 form input, form textarea {
   width: 80%;
   padding: 10px;
