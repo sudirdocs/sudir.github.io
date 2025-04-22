@@ -3,69 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sudir Pandian - AWS Cloud Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Sudir Pandian - AWS Cloud Engineer | DevOps Enthusiast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1 class="fade-in">Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
-    <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
-    <p class="highlight">🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
-    <a href="#" class="btn fade-in">📄 Download My Resume</a>
-    <div class="socials fade-in">
-      <a href="https://github.com/sudir" target="_blank">🐱 GitHub</a>
-      <a href="https://www.linkedin.com/in/sudir" target="_blank">🔗 LinkedIn</a>
-    </div>
+    <header>
+      <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
+      <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
+      <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
+      <a href="#resume" class="btn">📄 Download My Resume</a>
+      <div class="socials">
+        <a href="https://github.com/sudir" target="_blank">🐱 GitHub</a>
+        <a href="https://www.linkedin.com/in/sudir-pandian" target="_blank">🔗 LinkedIn</a>
+      </div>
+    </header>
+    
+    <section class="skills slide-in-left">
+      <h3>Skills</h3>
+      <ul>
+        <li>AWS (EC2, S3, RDS, Lambda, VPC, IAM)</li>
+        <li>CI/CD with CodePipeline, GitHub Actions</li>
+        <li>Infrastructure as Code: CloudFormation, Terraform</li>
+        <li>Linux Admin | Windows Server | Shell Scripting</li>
+      </ul>
+    </section>
+    
+    <section class="projects slide-in-right">
+      <h3>Projects</h3>
+      <ul>
+        <li>Global Web App Deployment: Used ALB + Global Accelerator to route traffic across regions.</li>
+        <li>Automated Monitoring: Shell scripts to push app metrics into CloudWatch.</li>
+        <li>Disaster Recovery: Restored production apps using Veeam and Commvault from EC2 snapshots.</li>
+      </ul>
+    </section>
+    
+    <section class="blog">
+      <h3>📰 Blog & Articles</h3>
+      <ul>
+        <li><a href="https://dev.to/sudir" target="_blank">Deploying a CI/CD pipeline with CodePipeline</a></li>
+        <li><a href="https://medium.com/@sudir" target="_blank">AWS Lambda Use Cases in Real Projects</a></li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h3>📬 Contact Me</h3>
+      <form action="https://formspree.io/f/{yourFormID}" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Sudir Pandian | All Rights Reserved</p>
+    </footer>
   </div>
-
-  <div class="container skills slide-in-left">
-    <h3>Skills</h3>
-    <ul>
-      <li>AWS (EC2, S3, RDS, Lambda, VPC, IAM)</li>
-      <li>CI/CD with CodePipeline, GitHub Actions</li>
-      <li>Infrastructure as Code: CloudFormation, Terraform</li>
-      <li>Linux Admin | Windows Server | Shell Scripting</li>
-    </ul>
-  </div>
-
-  <div class="container projects slide-in-right">
-    <h3>Projects</h3>
-    <ul>
-      <li>Global Web App Deployment: Used ALB + Global Accelerator to route traffic across regions.</li>
-      <li>Automated Monitoring: Shell scripts to push app metrics into CloudWatch.</li>
-      <li>Disaster Recovery: Restored production apps using Veeam and Commvault from EC2 snapshots.</li>
-    </ul>
-  </div>
-
-  <div class="container blogs fade-in">
-    <h3>Blog & Articles</h3>
-    <ul>
-      <li><a href="https://dev.to/" target="_blank">Deploying a CI/CD pipeline with CodePipeline</a></li>
-      <li><a href="https://medium.com/" target="_blank">AWS Lambda Use Cases in Real Projects</a></li>
-    </ul>
-  </div>
-
-  <div class="container contact fade-in">
-    <h3>Contact Me</h3>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
-
-  <div class="container jokes fade-in">
-    <h3>DevOps Jokes</h3>
-    <ul>
-      <li>Why do developers prefer dark mode? Because light attracts bugs!</li>
-      <li>Why did the DevOps engineer go broke? Because they couldn’t find a good balance between scaling and costs!</li>
-    </ul>
-  </div>
-
-  <button class="theme-toggle">🌙</button>
-
-  <script src="script.js"></script>
 </body>
 </html>
