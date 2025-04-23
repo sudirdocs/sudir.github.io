@@ -1,14 +1,18 @@
 :root {
-  --bg: #111;
-  --text: #fff;
-  --accent: #f9a825;
-  --hover: #ff5722;
+  --bg: #121212;
+  --text: #ffffff;
+  --accent: #1e88e5;
+  --hover: #1565c0;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,77 +20,68 @@ body {
   color: var(--text);
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  padding: 20px;
+  padding: 0;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
 
 header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
+header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+header p {
+  margin-bottom: 20px;
 }
 
 .highlight {
   color: var(--accent);
 }
 
-.resume-button {
-  margin-bottom: 20px;
-}
-
 .btn {
-  background-color: var(--accent);
-  color: var(--bg);
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 5px;
   display: inline-block;
+  background-color: var(--accent);
+  color: var(--text);
+  padding: 10px 20px;
+  border-radius: 5px;
   font-weight: bold;
-  font-size: 1rem;
+  text-decoration: none;
+  margin-bottom: 20px;
 }
 
 .btn:hover {
   background-color: var(--hover);
-  color: #fff;
 }
 
 .socials {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 .socials a {
-  font-weight: bold;
-  font-size: 1rem;
-  color: var(--accent);
+  color: var(--text);
+  margin: 0 10px;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .socials a:hover {
-  color: var(--hover);
+  color: var(--accent);
 }
 
 nav {
@@ -95,29 +90,35 @@ nav {
 }
 
 .nav-link {
-  margin: 0 20px;
-  font-weight: bold;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 15px;
   text-decoration: none;
-  color: var(--text);
-  font-size: 1rem;
 }
 
 .nav-link:hover {
-  color: var(--accent);
+  color: var(--hover);
 }
 
 section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
   padding: 50px 20px;
-  margin-bottom: 40px;
-  text-align: center;
+  margin-bottom: 30px;
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
 
 section.in-view {
   opacity: 1;
-  transform: translateY(0);
+}
+
+.skills, .projects, .contact {
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 ul {
@@ -126,70 +127,59 @@ ul {
 }
 
 li {
-  margin: 10px 0;
-  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
 }
 
 form {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: left;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-input, textarea {
+form input, form textarea {
   width: 100%;
-  padding: 14px;
+  max-width: 500px;
+  padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
-  background-color: #222;
+  background-color: #333;
   color: var(--text);
-  border: 1px solid #333;
-  font-size: 1rem;
-}
-
-button {
-  background-color: var(--accent);
-  color: var(--bg);
-  padding: 14px 24px;
   border: none;
-  border-radius: 5px;
   font-size: 1rem;
-  cursor: pointer;
 }
 
-button:hover {
+form button {
+  background-color: var(--accent);
+  color: var(--text);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
   background-color: var(--hover);
 }
 
 footer {
   text-align: center;
-  margin-top: 60px;
   font-size: 0.9rem;
-  color: #aaa;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+  margin-top: 40px;
 }
 
-/* 👇 Responsive Adjustments for mobile */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  .nav-link {
-    display: block;
-    margin: 10px 0;
-  }
-
+/* Responsive Design */
+@media (min-width: 768px) {
   .socials {
-    flex-direction: column;
-    gap: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
 
-  form {
-    padding: 0;
+  .btn {
+    margin-right: 15px;
   }
 }
