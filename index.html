@@ -2,34 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sudir Pandian - AWS Cloud Engineer | DevOps Enthusiast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudir Pandian - AWS Cloud Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
+    <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
+    <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
+    <a href="resume.pdf" class="btn" download>📄 Download My Resume</a>
+    <div class="socials">
+      <a href="https://github.com/sudir" target="_blank">🐱 GitHub</a>
+      <a href="https://www.linkedin.com/in/sudir-pandian" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+
   <div class="container">
-    <header>
-      <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
-      <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
-      <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
-
-      <div class="resume-button">
-        <a href="resume.pdf" download class="btn">📄 Download My Resume</a>
-      </div>
-
-      <div class="socials">
-        <a href="https://github.com/sudir" target="_blank">🐱 GitHub</a>
-        <a href="https://www.linkedin.com/in/sudir-pandian" target="_blank">🔗 LinkedIn</a>
-      </div>
-    </header>
-
-    <nav>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-
     <section id="skills" class="slide-in">
       <h3>Skills</h3>
       <ul>
@@ -49,42 +45,21 @@
       </ul>
     </section>
 
-    <section id="contact" class="contact">
-  <h3>📬 Contact Me</h3>
-  <form action="https://formspree.io/f/{yourFormID}" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</section>
-
-    <footer>
-      <p>&copy; 2025 Sudir Pandian | All Rights Reserved</p>
-    </footer>
+    <section id="contact" class="slide-in">
+      <h3>📬 Contact Me</h3>
+      <form action="https://formspree.io/f/{yourFormID}" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <div class="btn-center">
+          <button type="submit" class="btn">Send Message</button>
+        </div>
+      </form>
+    </section>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('.nav-link');
-      links.forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const target = document.querySelector(e.target.getAttribute('href'));
-          target.scrollIntoView({ behavior: 'smooth' });
-        });
-      });
-
-      const sections = document.querySelectorAll('section');
-      window.addEventListener('scroll', () => {
-        sections.forEach(section => {
-          const rect = section.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            section.classList.add('in-view');
-          }
-        });
-      });
-    });
-  </script>
+  <footer>
+    <p>&copy; 2025 Sudir Pandian | All Rights Reserved</p>
+  </footer>
 </body>
 </html>
