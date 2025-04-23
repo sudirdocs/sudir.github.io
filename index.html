@@ -2,31 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudir Pandian - AWS Cloud Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sudir Pandian | AWS Cloud Engineer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
-    <h1>Hello, I'm <span class="highlight">Sudir Pandian</span></h1>
+    <h1>Hello, I'm Sudir Pandian</h1>
     <h2>AWS Cloud Engineer | DevOps Enthusiast</h2>
     <p>🚀 Passionate about building scalable, secure cloud solutions and automation workflows in AWS.</p>
-    <a href="resume.pdf" class="btn" download>📄 Download My Resume</a>
-    <div class="socials">
-      <a href="https://github.com/sudir" target="_blank">🐱 GitHub</a>
-      <a href="https://www.linkedin.com/in/sudir-pandian" target="_blank">🔗 LinkedIn</a>
+    
+    <div class="actions">
+      <a href="Sudir_Resume.pdf" download class="resume-btn">📄 Download My Resume</a>
+      <a href="https://github.com/sudirdocs" target="_blank">🐱 GitHub</a>
+      <a href="https://linkedin.com/in/sudirpandian" target="_blank">🔗 LinkedIn</a>
     </div>
   </header>
 
   <nav>
     <a href="#skills" class="nav-link">Skills</a>
     <a href="#projects" class="nav-link">Projects</a>
-    <a href="#contact" class="nav-link">Contact</a>
   </nav>
 
-  <div class="container">
-    <section id="skills" class="slide-in">
+  <main>
+    <section id="skills" class="cloud-section hidden">
       <h3>Skills</h3>
       <ul>
         <li>AWS (EC2, S3, RDS, Lambda, VPC, IAM)</li>
@@ -36,7 +36,7 @@
       </ul>
     </section>
 
-    <section id="projects" class="slide-in">
+    <section id="projects" class="cloud-section hidden">
       <h3>Projects</h3>
       <ul>
         <li>Global Web App Deployment: ALB + Global Accelerator for region routing.</li>
@@ -45,21 +45,44 @@
       </ul>
     </section>
 
-    <section id="contact" class="slide-in">
+    <section id="contact">
       <h3>📬 Contact Me</h3>
-      <form action="https://formspree.io/f/{yourFormID}" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <div class="btn-center">
-          <button type="submit" class="btn">Send Message</button>
-        </div>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <div class="form-btn"><button type="submit">Send Message</button></div>
       </form>
     </section>
-  </div>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Sudir Pandian | All Rights Reserved</p>
+    © 2025 Sudir Pandian | All Rights Reserved
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('.cloud-section');
+
+      links.forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+
+          sections.forEach(sec => {
+            sec.classList.remove('visible');
+            sec.classList.add('hidden');
+          });
+
+          const targetId = link.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          targetSection.classList.remove('hidden');
+          targetSection.classList.add('visible');
+
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
